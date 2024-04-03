@@ -8,6 +8,7 @@ from django.urls import reverse
 
 class Main(models.Model):
     servername = models.CharField(max_length=16)
+    status = models.CharField(max_length=16)
 
 
 

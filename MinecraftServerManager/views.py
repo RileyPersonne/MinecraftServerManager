@@ -31,6 +31,6 @@ def details(request, id):
         'Player': data['data']['player']['username'],
         'Data': data['data']['player']['avatar'],
         'skin': data['data']['player']['skin_texture'],
-        'status': ,
+        'status': Main.objects.get(id=1).status,
     }
     return HttpResponse(template.render(context, request))
