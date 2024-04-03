@@ -21,14 +21,16 @@ def index(request):
 
 
 def details(request, id):
-    data = []
-    playerdata = GetProfileInfo(Dashboard.objects.get(id=id))
+    playerdata = GetProfileInfo(Dashboard.objects.get(id=id).username)
+    print(Dashboard.objects.get(id=id).username)
     data = json.loads(playerdata.text)
     servername = Main.objects.all().values()
     template = loader.get_template('Details.html')
     context = {
         'servername': servername,
         'Player': data['data']['player']['username'],
-        'Data': data['data']['player'][''],
+        'Data': data['data']['player']['avatar'],
+        'skin': data['data']['player']['skin_texture'],
+        'status': ,
     }
     return HttpResponse(template.render(context, request))

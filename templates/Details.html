@@ -37,7 +37,7 @@
     <article class="left_article">
       <h3>content heading</h3>
       <p>Username: {{ Player }}</p>
-      <p>Ip: {{ ip }}</p>
+      <p>Coordinates: {{x}} {{y}} {{z}}</p>
     </article>
     <aside class="Skin">
 	<img class="right_article" src="{{ Data }}">
@@ -45,14 +45,17 @@
   </section>
   <div class="row">
     <div class="columns">
-      <p class="thumbnail_align"> <img src="../../../Documents/NeoCities/images/bkg_06.jpg" alt="" class="thumbnail"/> </p>
-      <h4>TITLE</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+      <p class="thumbnail_align"> <img src="{{ skin }}" alt="" width="150%"/> </p>
+      <h4>Player Skin</h4>
     </div>
     <div class="columns">
       <p class="thumbnail_align"> <img src="../../../Documents/NeoCities/images/bkg_06.jpg" alt="" class="thumbnail"/> </p>
-      <h4>TITLE</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+      <h4>Inventory Contents</h4>
+      <ul>
+        {% for x in inventorycontents %}
+          <li>{{ x.name }} {{x.count}}</li>
+        {% endfor %}
+      </ul>
     </div>
     <div class="columns">
       <p class="thumbnail_align"> <img src="../../../Documents/NeoCities/images/bkg_06.jpg" alt="" class="thumbnail"/> </p>
@@ -65,25 +68,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
     </div>
   </div>
-  <div class="row blockDisplay">
-    <div class="column_half left_half">
-      <h2 class="column_title">LEFT COLUMN</h2>
-    </div>
-    <div class="column_half right_half">
-      <h2 class="column_title">RIGHT COLUMN</h2>
-    </div>
   </div>
-<!--
-  <div class="social">
-    <p class="social_icon"><img src="../../../Documents/NeoCities/images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
-    <p class="social_icon"><img src="../../../Documents/NeoCities/images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
-    <p class="social_icon"><img src="../../../Documents/NeoCities/images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
-    <p class="social_icon"><img src="../../../Documents/NeoCities/images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
-  </div>
-  -->
-  <footer class="secondary_header footer">
-    <div class="copyright">&copy;2021 - <strong>SIMPLE Theme</strong></div>
-  </footer>
 </div>
 </body>
 </html>
