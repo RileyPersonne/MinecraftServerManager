@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ servername.servername }}</title>
+
+    {% load static %}
+<link href="{% static 'Dash/DashStyle.css' %}" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+<script type="text/javascript" src="{% static 'Dash/DashJS.js' %}"></script>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="primary_header">
+        <h1 class="title">{{ servername }}</h1>
+    </div>
+    <nav class="secondary_header" id="menu">
+      <ul>
+        <li>DASHBOARD</li>
+        <li>PLAYERS</li>
+        <li>COMMANDS</li>
+        <li>SETTINGS</li>
+        <li>CONSOLE</li>
+        <li>LOG</li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2 class="noDisplay">Main Content</h2>
+    <article class="left_article">
+      <h3>content heading</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </article>
+    <aside class="PLAYERS">
+	<ul>
+	{% for x in ActivePlayers %}
+		<li>{{ x.username }}</li>
+        <ul class="player-menu">
+            <li data-action="Ban">Ban</li>
+            <li data-action="Mute">Mute</li>
+            <li data-action="Kick">Kick</li>
+            <li data-action="Message">Message</li>
+            <li data-action="Details"><a href="details/{{ x.id }}">Details</a></li>
+        </ul>
+	{% endfor%}
+	</ul>  
+	</aside>
+  </section>
+  <div class="row">
+    <div class="columns">
+      <p class="thumbnail_align"> <img src="../../../Documents/NeoCities/images/bkg_06.jpg" alt="" class="thumbnail"/> </p>
+      <h4>TITLE</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+    </div>
+    <div class="columns">
+      <p class="thumbnail_align"> <img src="../../../Documents/NeoCities/images/bkg_06.jpg" alt="" class="thumbnail"/> </p>
+      <h4>TITLE</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+    </div>
+    <div class="columns">
+      <p class="thumbnail_align"> <img src="../../../Documents/NeoCities/images/bkg_06.jpg" alt="" class="thumbnail"/> </p>
+      <h4>TITLE</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+    </div>
+    <div class="columns">
+      <p class="thumbnail_align"> <img src="../../../Documents/NeoCities/images/bkg_06.jpg" alt="" class="thumbnail"/> </p>
+      <h4>TITLE</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+    </div>
+  </div>
+  <div class="row blockDisplay">
+    <div class="column_half left_half">
+      <h2 class="column_title">LEFT COLUMN</h2>
+    </div>
+    <div class="column_half right_half">
+      <h2 class="column_title">RIGHT COLUMN</h2>
+    </div>
+  </div>
+<!--
+  <div class="social">
+    <p class="social_icon"><img src="../../../Documents/NeoCities/images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="../../../Documents/NeoCities/images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="../../../Documents/NeoCities/images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="../../../Documents/NeoCities/images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
+  </div>
+  -->
+  <footer class="secondary_header footer">
+    <div class="copyright">&copy;2021 - <strong>SIMPLE Theme</strong></div>
+  </footer>
+</div>
+</body>
+</html>
