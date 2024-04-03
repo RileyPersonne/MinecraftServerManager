@@ -10,5 +10,6 @@ class Main(models.Model):
     servername = models.CharField(max_length=16)
 
 
-class Dashboard(Main):
+
+class Dashboard(models.Model):
     username = models.CharField(max_length=16)
