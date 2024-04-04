@@ -23,5 +23,6 @@ from MinecraftServerManager import views
 urlpatterns = [
     path("", views.index, name="index"),
     path("details/<int:id>", views.details, name="details"),
+    path("console-output/", views.output, name="output"),
     path('admin/', admin.site.urls),
 ]

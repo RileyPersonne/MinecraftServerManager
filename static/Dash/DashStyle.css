@@ -186,7 +186,7 @@
 	padding-bottom: 0px;
 	padding-left: 0px;
 }
-.right_article ul li {
+.center_article ul li {
 	font-family: "Source Sans Pro";
 	list-style: none;
 	text-align: center;
@@ -243,16 +243,6 @@
 .column_title {
 	padding-top: 25px;
 	padding-bottom: 25px;
-}
-.copyright {
-	text-align: center;
-	background-color: #717070;
-	color: #FFFFFF;
-	text-transform: uppercase;
-	font-weight: lighter;
-	letter-spacing: 2px;
-	border-top-width: 2px;
-	font-family: "Source Sans Pro";
 }
 body {
 	margin-top: 0px;
